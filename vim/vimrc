@@ -42,7 +42,7 @@ nnoremap ;; ;
 nnoremap Q <nop>
 
 set laststatus=2                  " always show the status line
-set cmdheight=2                   " and use a two-line tall status line
+set cmdheight=1                   " and use a two-line tall status line
 set showcmd                       " show the command
 set noshowmode                    " don't show the mode, vim-airline will do that for us
 set autoindent                    " turns it on
@@ -61,21 +61,21 @@ endif
 set number                        " except for the current line - absolute number there
 set backspace=indent,eol,start    " make backspace behave in a sane manner
 set mousehide                     " hide mouse when typing
-set foldenable                    " enable code folding
+" set foldenable                    " enable code folding
 set history=1000
 set ffs=unix,mac,dos              " default file types
 set autoread                      " automatically update file when editted outside of vim
 if exists("&cryptmethod")
   set cryptmethod=blowfish        " Strong encryption is good
 endif
-set cursorline                    " highlight the line where the cursor is
+" set cursorline                    " highlight the line where the cursor is
 
 " Relative Number and Number toggle
 nnoremap <F10> :set relativenumber! number! number?<CR>
 
 " Folding settings
-set foldcolumn=3                  " room for fold markers
-set foldmethod=marker             " use the standard 3 curly braces as markers
+" set foldcolumn=0                  " room for fold markers
+" set foldmethod=marker             " use the standard 3 curly braces as markers
 
 " Encoding anyone?
 set termencoding=utf-8            " we like utf-8
@@ -173,9 +173,9 @@ endif
 
 " }}}
 " Tabstops {{{
-set tabstop=2           " 2 spaces for a tab - used when vim opens a file having <tab>s in it
-set shiftwidth=2        " 2 spaces for autoindenting
-set softtabstop=2       " 2 spaces inserted for <tab> when editing a file, also # removed by backspace
+set tabstop=4           " 2 spaces for a tab - used when vim opens a file having <tab>s in it
+set shiftwidth=4        " 2 spaces for autoindenting
+set softtabstop=4       " 2 spaces inserted for <tab> when editing a file, also # removed by backspace
 set expandtab           " expand tabs to spaces (overloadable by file type)
 
 " }}}
@@ -341,6 +341,7 @@ if has("autocmd")
   autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
   " syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType c    setlocal ts=4 sts=4 sw=4 expandtab
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -404,3 +405,4 @@ nmap <silent><leader>s :call ToggleSyntax()<cr>
 " finis {{{
 
 " }}}
+filetype indent on
