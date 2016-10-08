@@ -33,6 +33,11 @@ Plug 'benmills/vimux'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 " Plug 'reedes/vim-pencil', { 'for': 'markdown' }
 
+" ----- Mark and Highlight-Full-Lines
+Plug 'vim-scripts/BOOKMARKS--Mark-and-Highlight-Full-Lines'
+
+Plug 'freemandealer/CodeCoverFlow'
+
 call plug#end() 
 
 " turn things on
