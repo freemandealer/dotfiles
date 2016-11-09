@@ -53,6 +53,8 @@ set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
 set ruler                         " display current cursor position
 set list                          " show invisible characters
+scriptencoding utf-8
+set encoding=utf-8
 set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set showmatch                     " show matching brackets [{()}]
 " if exists("&relativenumber")
