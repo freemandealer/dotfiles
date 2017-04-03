@@ -157,6 +157,9 @@ set backup                       " emable backups
 set noswapfile                    " It's the 21st century already
 
 if has('persistent_undo')
+  set undofile                " Save undo's after file closes
+  set undolevels=10000         " How many undos
+  set undoreload=100000        " number of lines to save for undo
   set undodir=~/.vim/tmp/undo//     " undo files
   if !isdirectory(expand(&undodir))
     call mkdir(expand(&undodir), "p")
@@ -379,7 +382,7 @@ if has("autocmd")
 
   " Python files
   let NERDTreeIgnore = ['\.pyc$', '\~$', '\.rbc$']
-  autocmd BufNewFile,BufRead *.py set ts=2 sts=2 sw=2 expandtab
+  autocmd BufNewFile,BufRead *.py set ts=4 sts=4 sw=4 expandtab
 
   " Ensure syntax highlighting for diffs
   autocmd FileType diff syntax enable
