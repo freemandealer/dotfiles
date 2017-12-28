@@ -38,6 +38,9 @@ Plug 'vim-scripts/BOOKMARKS--Mark-and-Highlight-Full-Lines'
 
 Plug 'freemandealer/CodeCoverFlow'
 
+" ----- auto adjust indent
+Plug 'tpope/vim-sleuth'
+
 call plug#end() 
 
 " turn things on
