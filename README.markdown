@@ -68,6 +68,15 @@ To install vim-plug run the following command:
     curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+To truly enable YouCompleteMe, further steps should be taken. `cd` to the plugin directory
+`~/.vim/plugged/YouCompleteMe/` and then `python install.py` ,or `python install.py --clang-completer`
+if C-family syntastic support is needed. Refer to YouCompleteMe README for installation details.
+Warning! Prepare yourself for incoming troubles since YouCompleteMe would be one of the most
+complicated vim plugin to install.
+
+> When building YouCompleteMe, I encountered a warning said `Failed on 100%: Linking CXX shared library`.
+> It seems safe to just ignore as ycm_core is successfuly built anyway.
+
 ## Git
 For Git configuration and global ignore files, create these symlinks:
 
