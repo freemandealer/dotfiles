@@ -41,6 +41,12 @@ Plug 'freemandealer/CodeCoverFlow'
 " ----- auto adjust indent
 Plug 'tpope/vim-sleuth'
 
+" ----- turn lines into printf statements
+Plug 'mptre/vim-printf'
+
+" ----- no need to instroduce this one
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end() 
 
 " turn things on
