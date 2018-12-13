@@ -47,6 +47,12 @@ Plug 'mptre/vim-printf'
 " ----- no need to instroduce this one
 Plug 'Valloric/YouCompleteMe'
 
+" ----- Ascii drawing plugin
+Plug 'DrawIt'
+
+" ----- taglist to show functions, class, etc. in the file
+Plug 'taglist.vim'
+
 call plug#end() 
 
 " turn things on
