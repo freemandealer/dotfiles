@@ -173,6 +173,9 @@ nnoremap <leader>vi :call VimuxRunCommand("ingen")<cr>
 nnoremap <leader>vz :call VimuxRunCommand("dz")<cr>
 nnoremap <leader>vd :call VimuxRunCommand("deploy")<cr>
 
+" YCM configure
+let g:ycm_key_list_stop_completion = ['<CR>']
+
 " }}}
 " finis {{{
 
