@@ -418,12 +418,13 @@ if has("autocmd")
       au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" mark one line with highlight
+:nnoremap <silent> <Leader>m :call matchadd('Search', '\%'.line('.').'l')<CR>
+
 " taglist toggle on/off
 nnoremap <leader>t :TlistToggle<cr>
 
-" comment the following if-endif to make YouCompleteMe config work
-"if has("YouCompleteMe")
-" let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 set completeopt=longest,menu	"让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif	"离开插入模式后自动关闭预览窗口
 inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"	"回车即选中当前项
@@ -458,4 +459,3 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 
 let g:ycm_key_invoke_completion = '<C-x>'
-"endif
