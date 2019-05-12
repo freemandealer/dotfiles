@@ -459,3 +459,38 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> " 跳转到定义处
 
 let g:ycm_key_invoke_completion = '<C-x>'
+
+
+" cscope config
+if has("cscope")
+  set csprg=/usr/local/bin/cscope
+  set csto=0
+  set cst
+  set nocsverb
+  if filereadable("cscope.out")
+    cs add cscope.out
+  elseif $CSCOPE_DB != ""
+    cs add $CSCOPE_DB
+  endif
+  set csverb
+endif
+
+" set cscopetag to enable both ctags and cscopetags when using ctrl+]
+set nocscopetag "but here use ctags only to avoid mess up
+nnoremap <leader>fs :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fg :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fc :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>ft :cs find t <C-R>=expand("<cword>")<CR><CR>
+" personaly, I replace 'find with e' with Ack.vim`
+" nnoremap <leader>fe :cs find e <c-r>=expand("<cword>")<cr><cr>
+nnoremap <leader>ff :cs find f <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fi :cs find i <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fd :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fa :cs find a <C-R>=expand("<cword>")<CR><CR>
+
+" grep-like tools config
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+nmap <leader>fe :Ack <c-r>=expand("<cword>")<cr><cr>

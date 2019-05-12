@@ -53,6 +53,10 @@ Plug 'DrawIt'
 " ----- taglist to show functions, class, etc. in the file
 Plug 'taglist.vim'
 
+
+" ----- grep in vim, use with Ack or theSilverSearcher(faster)
+Plug 'mileszs/ack.vim'
+
 call plug#end() 
 
 " turn things on
