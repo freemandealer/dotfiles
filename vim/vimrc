@@ -133,6 +133,15 @@ nnoremap <leader>be :enew<cr>           " create new empty buffer
 nnoremap <leader>bn :bnext<cr>          " move to next buffer
 nnoremap <leader>bp :bprevious<cr>      " move to previous buffer
 nnoremap <leader>bq :bp <BAR> bd #<cr>  " move to previous and close buffer
+nnoremap <leader>1 :b1<cr>
+nnoremap <leader>2 :b2<cr>
+nnoremap <leader>3 :b3<cr>
+nnoremap <leader>4 :b4<cr>
+nnoremap <leader>5 :b5<cr>
+nnoremap <leader>6 :b6<cr>
+nnoremap <leader>7 :b7<cr>
+nnoremap <leader>8 :b8<cr>
+nnoremap <leader>9 :b9<cr>
 
 " nnoremap <M-t> :tabnew<CR>              " new tab <C-t>
 " nnoremap <M-p> :tabprevious<CR>         " previous tab <C-p>
