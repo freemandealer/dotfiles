@@ -45,7 +45,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'mptre/vim-printf'
 
 " ----- no need to instroduce this one
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 
 " ----- Ascii drawing plugin
 Plug 'DrawIt'
@@ -56,6 +56,9 @@ Plug 'taglist.vim'
 
 " ----- grep in vim, use with Ack or theSilverSearcher(faster)
 Plug 'mileszs/ack.vim'
+
+" ----- tabnine, the AI code completor
+Plug 'zxqfl/tabnine-vim'
 
 call plug#end() 
 
