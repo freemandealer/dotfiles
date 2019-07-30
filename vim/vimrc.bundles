@@ -60,6 +60,9 @@ Plug 'mileszs/ack.vim'
 " ----- tabnine, the AI code completor
 Plug 'zxqfl/tabnine-vim'
 
+" ----- generic log highlighter, little customized for baidu
+Plug 'freemandealer/vim-log-highlighting'
+
 call plug#end() 
 
 " turn things on
