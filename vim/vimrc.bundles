@@ -63,6 +63,13 @@ Plug 'zxqfl/tabnine-vim'
 " ----- generic log highlighter, little customized for baidu
 Plug 'freemandealer/vim-log-highlighting'
 
+" ----- An asynchronous fuzzy finder which is used to quickly locate files,
+"  buffers, mrus, tags, etc. in large project
+Plug 'Yggdroot/LeaderF'
+
+" ----- Work with Tmux plugin to uniform the navigation of vim and tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end() 
 
 " turn things on
@@ -110,7 +117,7 @@ let g:airline_theme='dark'
 " }}}
 " Control-P {{{
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_cmd = 'Leaderf file'
 let g:ctrlp_working_path_mode = 'ra'
 
 " }}}

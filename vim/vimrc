@@ -1,5 +1,5 @@
-" .vimrc
 " Author: Mark Nichols <mark@zanshin.net>
+" .vimrc
 " Source: http://github.com/zanshin/dotfiles/vim/vimrc
 "
 " Preface {{{
@@ -503,3 +503,4 @@ if executable('ag')
 endif
 
 nmap <leader>fe :Ack <c-r>=expand("<cword>")<cr><cr>
+nmap <c-p> :LeaderF file

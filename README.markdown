@@ -71,8 +71,7 @@ To install vim-plug run the following command:
 To truly enable YouCompleteMe, further steps should be taken. `cd` to the plugin directory
 `~/.vim/plugged/YouCompleteMe/` and then `python install.py` ,or `python install.py --clang-completer`
 if C-family syntastic support is needed. Refer to YouCompleteMe README for installation details.
-Warning! Prepare yourself for incoming troubles since YouCompleteMe would be one of the most
-complicated vim plugin to install.
+Warning! Prepare yourself for incoming troubles since YouCompleteMe would be one of the most complicated vim plugin to install.
 
 > When building YouCompleteMe, I encountered a warning said `Failed on 100%: Linking CXX shared library`.
 > It seems safe to just ignore as ycm_core is successfuly built anyway.
@@ -100,9 +99,35 @@ For TextMate 2 settings create the following symlink:
     $ ln -s ~/.dotflles/textmate/tm_properties ~/.tm_properties
 
 ## tmux (terminal multiplexer) configuration
+
 For tmux configuration create this symlink:
 
     $ ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+
+And install tmux plugins:
+
+    $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+Put this at the bottom of ~/.tmux.conf :
+
+    # List of plugins
+    set -g @plugin 'tmux-plugins/tpm'
+    set -g @plugin 'tmux-plugins/tmux-sensible'
+
+    # Other examples:
+    # set -g @plugin 'github_username/plugin_name'
+    # set -g @plugin 'git@github.com/user/plugin'
+    # set -g @plugin 'git@bitbucket.com/user/plugin'
+
+    # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+    run -b '~/.tmux/plugins/tpm/tpm'
+
+Reload with:
+
+    # type this in terminal if tmux is already running
+    $ tmux source ~/.tmux.conf
+
+Press prefix + I to install plugin.
 
 ## Sublime Text 2 (subl)
 Install Package Control following the instructions here: http://wbond.net/sublime_packages/package_control

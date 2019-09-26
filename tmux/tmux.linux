@@ -160,3 +160,12 @@ set -g status-left "#[fg=green]: #h : #[fg=yellow]#(uptime | rev | cut -d ' ' -f
 set -g status-right-length 80
 set -g status-right "#[fg=cyan]%b %d #[fg=green] %l:%M %p"
 
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect' # continuum depend on this
+set -g @plugin 'tmux-plugins/tmux-continuum' # auto save & recover tmux session
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
