@@ -8,7 +8,7 @@ set nocompatible
 
 " }}}
 " Bundles {{{
-" The presence of the .vimrc.bundles file means we're on a machine I 
+" The presence of the .vimrc.bundles file means we're on a machine I
 " have more control over rather than less. So we'll use that to setup
 " some spelling settings. Crude.
 if filereadable(expand("~/.vimrc.bundles"))
@@ -17,7 +17,7 @@ if filereadable(expand("~/.vimrc.bundles"))
   set complete+=kspell
 else
   set background=dark
-  silent! colorscheme molokai 
+  silent! colorscheme molokai
   set spellfile=~$HOME/.vim-spell-en.utf-8.add
   set complete+=kspell
 endif
@@ -114,7 +114,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Move line(s) up or down via C-j and C-k respectively 
+" Move line(s) up or down via C-j and C-k respectively
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
@@ -335,9 +335,9 @@ noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo '
 " Command line completion {{{
 
 set wildmenu                 " navigate <left> & <right> through completion lists
-set wildmode=full             " complete first full match, next match (default) 
+set wildmode=full             " complete first full match, next match (default)
 
-set wildignore+=.git                           " ignore Git 
+set wildignore+=.git                           " ignore Git
 set wildignore+=*.jpg,*.png,*.gif,*.jpeg,*.bmp " ignore image files
 set wildignore+=*.sw?                          " swap files
 set wildignore+=*.DS_Store                     " OS X clutter
@@ -504,3 +504,11 @@ endif
 
 nmap <leader>fe :Ack <c-r>=expand("<cword>")<cr><cr>
 nmap <c-p> :LeaderF file
+
+func! DeleteTrailingWS()
+    exec "normal mz"
+    %s/\s\+$//ge
+    exec "normal `z"
+endfunc
+au BufWrite * :call DeleteTrailingWS()
+map <leader>W :call DeleteTrailingWS()<CR>
