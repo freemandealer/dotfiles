@@ -70,7 +70,11 @@ Plug 'Yggdroot/LeaderF'
 " ----- Work with Tmux plugin to uniform the navigation of vim and tmux
 Plug 'christoomey/vim-tmux-navigator'
 
-call plug#end() 
+" ----- Highlight multiple keywords
+Plug 'inkarkat/vim-ingo-library'
+Plug 'inkarkat/vim-mark'
+
+call plug#end()
 
 " turn things on
 if has('autocmd')

@@ -512,3 +512,7 @@ func! DeleteTrailingWS()
 endfunc
 au BufWrite * :call DeleteTrailingWS()
 map <leader>W :call DeleteTrailingWS()<CR>
+
+" reserve these key for Mark
+unmap <leader>m
+unmap <leader>/
