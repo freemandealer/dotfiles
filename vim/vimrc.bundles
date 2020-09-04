@@ -65,7 +65,7 @@ Plug 'freemandealer/vim-log-highlighting'
 
 " ----- An asynchronous fuzzy finder which is used to quickly locate files,
 "  buffers, mrus, tags, etc. in large project
-Plug 'Yggdroot/LeaderF'
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " ----- Work with Tmux plugin to uniform the navigation of vim and tmux
 Plug 'christoomey/vim-tmux-navigator'
